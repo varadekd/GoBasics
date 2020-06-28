@@ -63,4 +63,6 @@ func main() {
 	// The below part is valid since we are declaring a new variable and in case it won't show any error
 	value := methods.ChangeValueThroughReturnString()
 	fmt.Println("\nChangeValueThroughReturnString returned the value: ", value)
+	a := 7
+	methods.TestFunction(globalVariable, a)
 }

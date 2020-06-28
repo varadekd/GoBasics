@@ -73,6 +73,14 @@ func GetDivisionValue(dividend, divisor int) (int, error) {
 	}
 
 	return (dividend / divisor), nil
+	// It is necessary for you to return the value since the function is expecting it to return something
 }
 
-// Since the input of two int is fiven as int inorder to return float we need to convert it
+// This is just test function
+// func TestFunction(val, val1 int) string {
+// 	fmt.Println("Printing values from test function: ", val)
+// 	var a string
+// 	return a
+// 	// return variable or return "somrthing is valid"
+// 	// But returning return var a string, return string is not valid
+// }
