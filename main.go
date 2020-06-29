@@ -25,7 +25,12 @@ func main() {
 	// const constantValue = "I am string"
 	// methods.ChangeStringValue(&constantValue)
 
+	// fmt.Println("Prinitng the value of divisor: " , divisor)
+	// Above syntax is not valid since the variable scope start after it is declared
+
 	const divisor = 2
+	// However this is valid
+	fmt.Println("Prinitng the value of divisor: ", divisor)
 
 	// This is a wrong way to access the package methods
 	// methods.packageImportMessage()
@@ -63,6 +68,9 @@ func main() {
 	// The below part is valid since we are declaring a new variable and in case it won't show any error
 	value := methods.ChangeValueThroughReturnString()
 	fmt.Println("\nChangeValueThroughReturnString returned the value: ", value)
-	a := 7
-	methods.TestFunction(globalVariable, a)
+
+	// a := 7
+	// fmt.Println("Value of a before calling the function: ", a)
+	// methods.TestFunction(&a)
+	// fmt.Println("Value of a before calling the function: ", a)
 }

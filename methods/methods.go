@@ -77,10 +77,11 @@ func GetDivisionValue(dividend, divisor int) (int, error) {
 }
 
 // This is just test function
-// func TestFunction(val, val1 int) string {
-// 	fmt.Println("Printing values from test function: ", val)
-// 	var a string
-// 	return a
-// 	// return variable or return "somrthing is valid"
-// 	// But returning return var a string, return string is not valid
+// func TestFunction(val *int) {
+// 	*val = 9
+// 	// 	fmt.Println("Printing values from test function: ", val)
+// 	// 	var a string
+// 	// 	return a
+// 	// 	// return variable or return "somrthing is valid"
+// 	// 	// But returning return var a string, return string is not valid
 // }
