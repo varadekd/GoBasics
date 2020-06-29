@@ -15,6 +15,10 @@ var globalVariable int = 10
 
 // globalVariable := 90 Why this declaration is not valid?
 
+// a , b := 1, 0 This is a valid declaration and if we use it it won't show any error
+// But
+a, b := 1 , a
+
 func main() {
 	// Printing message for package is called
 	methods.PackageImportMessage()
