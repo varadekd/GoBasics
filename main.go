@@ -66,6 +66,9 @@ func main() {
 	remainder, err := methods.GetDivisionValue(globalVariable, divisor)
 	fmt.Println("The value after divison is: ", remainder, err)
 
+	// Performs all the basic arthimetic operations
+	methods.BasicArthimeticOperations()
+
 	// globalVariable = methods.ChangeValueThroughReturnString()
 	// This will throw an error becase though the function is returning the valid value but the variable has a value of type int
 
