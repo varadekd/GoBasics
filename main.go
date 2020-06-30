@@ -54,6 +54,13 @@ func main() {
 	fmt.Println("Value of globalVariable after calling ChangeValue: ", globalVariable)
 	// Passing the address will make sense only in the cases where I want to change the value stored on that address.
 
+	// globalVariable = methods.ChangeValueThroughReturnString()
+	// This will throw an error becase though the function is returning the valid value but the variable has a value of type int
+
+	// The below part is valid since we are declaring a new variable and in case it won't show any error
+	value := methods.ChangeValueThroughReturnString()
+	fmt.Println("\nChangeValueThroughReturnString returned the value: ", value)
+
 	// Example to access the value and then returing the computed values
 	fmt.Println("\nWill return the sqaure of the value passed: ", methods.GetSqaure(globalVariable))
 
@@ -73,13 +80,6 @@ func main() {
 	// Functions for checking typed and untyped
 	methods.UntypedConst(2.1)
 	// methods.TypedConst(2.1)
-
-	// globalVariable = methods.ChangeValueThroughReturnString()
-	// This will throw an error becase though the function is returning the valid value but the variable has a value of type int
-
-	// The below part is valid since we are declaring a new variable and in case it won't show any error
-	value := methods.ChangeValueThroughReturnString()
-	fmt.Println("\nChangeValueThroughReturnString returned the value: ", value)
 
 	// a := 7
 	// fmt.Println("Value of a before calling the function: ", a)
