@@ -81,6 +81,22 @@ func main() {
 	methods.UntypedConst(2.1)
 	// methods.TypedConst(2.1)
 
+	// Below functions are checking the declaration of boolean
+	methods.DeclareBoolTrue()
+	methods.DeclareBoolFalse()
+	methods.DeclareBoolFromCondition(90, 89)
+
+	// Conversion when untyped variable is passed
+	// var variable1 = 90
+	// methods.UndeclaredTypeVar(variable1)
+	const variable2 = 90
+	fmt.Printf("\nValue %d of variable2 before calling UndeclaredTypeConst and its type is %T", variable2, variable2)
+	methods.UndeclaredTypeConst(variable2)
+
+	// const variable3 float32 = 90.0
+	// fmt.Printf("\nValue %d of variable3 before calling UndeclaredTypeConst and its type is %T", variable3, variable3)
+	// methods.DeclaredTypeConst(variable3)
+
 	// a := 7
 	// fmt.Println("Value of a before calling the function: ", a)
 	// methods.TestFunction(&a)
@@ -93,7 +109,7 @@ func main() {
 		Lastname:  "Varade",
 	}
 
-	fmt.Printf("Inital name: %+v\n", person)
+	fmt.Printf("\nInital name: %+v\n", person)
 	methods.AccessPerson(person)
 	fmt.Printf("Value of person after calling accessPerson %+v\n", person)
 	methods.ChangeFirstName(&person)
