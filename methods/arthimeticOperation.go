@@ -16,9 +16,9 @@ func GetDivisionValue(dividend, divisor int) (int, error) {
 }
 
 // Written in doubts
-// func GetMultiplication(multiplicant1 float32, multiplicant2 int) {
-// 	fmt.Println(multiplicant1 * multiplicant2)
-// }
+func GetMultiplication(multiplicant1 float32, multiplicant2 float32) {
+	fmt.Println(multiplicant1 * multiplicant2)
+}
 
 func BasicArthimeticOperations() {
 	fmt.Println("\n", 1+1.9)
@@ -41,3 +41,20 @@ func BasicArthimeticOperations() {
 // 	fmt.Printf("%T%T%T ", a, multiplicant1, multiplicant2)
 // 	fmt.Println("Multiplication of a float value and int is: ", (a*multiplicant1)+(a*multiplicant2))
 // 	fmt.Println(multiplicant1 / a)
+
+// Special notes when working with const in GO
+//  const in go are typed or untyped and for the untyped the value gets change if the context is changed.
+// Example
+// const a = 1 is of type int
+// But if it is used like this 2.1 * 1 it will act as float64 (The default type for untyped const if float64 for floating point)
+// For the below program is valid
+func UntypedConst(val float32) {
+	const a = 2
+	fmt.Println("Printing multiplication of untyped const and val passed as argument: ", val*a)
+}
+
+// But the below program will not work
+// func TypedConst(val float32) {
+// 	const a int = 2
+// 	fmt.Println("Printing multiplication of typed const and val passed as argument: ", val*a)
+// }

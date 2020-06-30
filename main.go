@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"../src/methods"
+	"../src/structs"
 )
 
 var globalVariable int = 10
@@ -69,6 +70,10 @@ func main() {
 	// Performs all the basic arthimetic operations
 	methods.BasicArthimeticOperations()
 
+	// Functions for checking typed and untyped
+	methods.UntypedConst(2.1)
+	// methods.TypedConst(2.1)
+
 	// globalVariable = methods.ChangeValueThroughReturnString()
 	// This will throw an error becase though the function is returning the valid value but the variable has a value of type int
 
@@ -80,4 +85,17 @@ func main() {
 	// fmt.Println("Value of a before calling the function: ", a)
 	// methods.TestFunction(&a)
 	// fmt.Println("Value of a before calling the function: ", a)
+
+	// Using user defined type
+
+	person := structs.Person{
+		Firstname: "",
+		Lastname:  "Varade",
+	}
+
+	fmt.Printf("Inital name: %+v\n", person)
+	methods.AccessPerson(person)
+	fmt.Printf("Value of person after calling accessPerson %+v\n", person)
+	methods.ChangeFirstName(&person)
+	fmt.Printf("Value of person after calling ChangeFirstName %+v", person)
 }
