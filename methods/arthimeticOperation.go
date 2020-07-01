@@ -58,3 +58,9 @@ func UntypedConst(val float32) {
 // 	const a int = 2
 // 	fmt.Println("Printing multiplication of typed const and val passed as argument: ", val*a)
 // }
+
+// The below functions is to perform arthimetic operations on pointer type
+// func OperationsOnPointer(a *int) {
+// 	fmt.Println("Value of a inside OperationsOnPointer: ", a)
+// 	a = a + a // Any arthimetic operation is not valid for the pointer type
+// }

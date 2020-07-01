@@ -96,6 +96,10 @@ func main() {
 
 	methods.UntypedDeclaration() // Will print all the default types for the variable declaration
 
+	// The puspose of this is to learn about arthimetic operations on pointer
+	val1 := 10
+	methods.OperationsOnPointer(&val1)
+
 	// const variable3 float32 = 90.0
 	// fmt.Printf("\nValue %d of variable3 before calling UndeclaredTypeConst and its type is %T", variable3, variable3)
 	// methods.DeclaredTypeConst(variable3)
