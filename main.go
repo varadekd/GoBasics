@@ -7,6 +7,7 @@ import (
 	"../src/structs"
 )
 
+// If you are declaring the const for variable it should be done on package level
 var globalVariable int = 10
 
 //var globalVariable string = 90
@@ -99,13 +100,11 @@ func main() {
 	// fmt.Printf("\nValue %d of variable3 before calling UndeclaredTypeConst and its type is %T", variable3, variable3)
 	// methods.DeclaredTypeConst(variable3)
 
-	// a := 7
-	// fmt.Println("Value of a before calling the function: ", a)
-	// methods.TestFunction(&a)
-	// fmt.Println("Value of a before calling the function: ", a)
+	// Learning of pointer the below methods call the UnderstandingPointer function which further calls changePointerValue function
+	// Check file pointers.go
+	methods.UnderstandingPointer()
 
 	// Using user defined type
-
 	person := structs.Person{
 		Firstname: "",
 		Lastname:  "Varade",
@@ -113,7 +112,9 @@ func main() {
 
 	fmt.Printf("\nInital name: %+v\n", person)
 	methods.AccessPerson(person)
+	// If we pass like this the address for the variable decalred and varible passed will be different
+	// Means if we print the address of person here and the passed argument address inside the function they both will differ
 	fmt.Printf("Value of person after calling accessPerson %+v\n", person)
 	methods.ChangeFirstName(&person)
-	fmt.Printf("Value of person after calling ChangeFirstName %+v", person)
+	fmt.Printf("Value of person after calling ChangeFirstName %+v\n", person)
 }
