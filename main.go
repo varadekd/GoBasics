@@ -108,6 +108,7 @@ func main() {
 	// Learning of pointer the below methods call the UnderstandingPointer function which further calls changePointerValue function
 	// Check file pointers.go
 	methods.UnderstandingPointer()
+	methods.UnderstandingPointerPointer()
 
 	// Using user defined type
 	person := structs.Person{
