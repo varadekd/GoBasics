@@ -2,7 +2,6 @@ package methods
 
 import (
 	"fmt"
-	"unsafe"
 )
 
 // The purpose of this program is to check wether the untyped works for variable
@@ -29,7 +28,6 @@ func UntypedDeclaration() {
 	// Printing the type and size of each variable
 	fmt.Println("Short hand deation default type")
 	fmt.Printf("\n%T\n%T\n%T\n%T\n", shortHandInt, shortHandFloat, shortHandString, shortHandBool)
-	fmt.Println(unsafe.Sizeof(shortHandString))
 
 	var varInt = 19
 	var varFloat = 19.19
@@ -39,7 +37,6 @@ func UntypedDeclaration() {
 	// Printing the type and size of each variable
 	fmt.Println("Varaible declaration default type")
 	fmt.Printf("\n%T\n%T\n%T\n%T\n", varInt, varFloat, varBool, varString)
-	fmt.Println(unsafe.Sizeof(varString))
 
 	const constInt = 19
 	const constFloat = 19.19
@@ -49,7 +46,7 @@ func UntypedDeclaration() {
 	// Printing the type and size of each variable
 	fmt.Println("constant declaration default type")
 	fmt.Printf("\n%T\n%T\n%T\n%T\n", constInt, constFloat, constBool, constString)
-	fmt.Println(unsafe.Sizeof(constString))
 }
 
-// We will use untyped declaration in cases where we want to
+// We will use untyped declaration in cases where we are not bother about the which size we want to use.
+// Like if we are not specifying var a = 10 then default type is int
