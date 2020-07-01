@@ -27,7 +27,7 @@ func UntypedDeclaration() {
 	shortHandString := "This is short hand declaration"
 
 	// Printing the type and size of each variable
-	fmt.Println("\n Short hand deation default type")
+	fmt.Println("Short hand deation default type")
 	fmt.Printf("\n%T\n%T\n%T\n%T\n", shortHandInt, shortHandFloat, shortHandString, shortHandBool)
 	fmt.Println(unsafe.Sizeof(shortHandString))
 
@@ -37,7 +37,7 @@ func UntypedDeclaration() {
 	var varString = "This is varaible declaration"
 
 	// Printing the type and size of each variable
-	fmt.Println("\nVaraible declaration default type")
+	fmt.Println("Varaible declaration default type")
 	fmt.Printf("\n%T\n%T\n%T\n%T\n", varInt, varFloat, varBool, varString)
 	fmt.Println(unsafe.Sizeof(varString))
 
