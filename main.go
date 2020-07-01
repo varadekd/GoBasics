@@ -93,6 +93,8 @@ func main() {
 	fmt.Printf("\nValue %d of variable2 before calling UndeclaredTypeConst and its type is %T", variable2, variable2)
 	methods.UndeclaredTypeConst(variable2)
 
+	methods.UntypedDeclaration() // Will print all the default types for the variable declaration
+
 	// const variable3 float32 = 90.0
 	// fmt.Printf("\nValue %d of variable3 before calling UndeclaredTypeConst and its type is %T", variable3, variable3)
 	// methods.DeclaredTypeConst(variable3)
