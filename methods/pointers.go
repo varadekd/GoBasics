@@ -44,13 +44,13 @@ func changeValue(a *int) {
 
 // Purpose of this function is to understand the logic of pointer to pointer
 func UnderstandingPointerPointer() {
-	i := 10       // Assigning the value to the variable i of type int (If not specified it will detect on it's own)
-	ptr1 := &i    // Assiging address of the i to ptr1 (Type will be *int since the value stored there is of type int- And we know that)
+	a := 10       // Assigning the value to the variable i of type int (If not specified it will detect on it's own)
+	ptr1 := &a    // Assiging address of the i to ptr1 (Type will be *int since the value stored there is of type int- And we know that)
 	ptr2 := &ptr1 // Assinging the address of ptr1 to the ptr2
 
 	// Printing values at each point
-	fmt.Println("Value of i: ", i)
-	fmt.Println("Address of i: ", &i)
+	fmt.Println("\nValue of a: ", a)
+	fmt.Println("Address of a: ", &a)
 
 	fmt.Println("Value of ptr1: ", ptr1)
 	fmt.Println("Address of i: ", &ptr1)

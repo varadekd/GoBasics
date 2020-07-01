@@ -123,4 +123,7 @@ func main() {
 	fmt.Printf("Value of person after calling accessPerson %+v\n", person)
 	methods.ChangeFirstName(&person)
 	fmt.Printf("Value of person after calling ChangeFirstName %+v\n", person)
+
+	// Exploring more about the pass by address for the user defined type
+	methods.UnderstandingPassByAddress()
 }
