@@ -54,10 +54,8 @@ func main() {
 	// This will work because for const value the context is changed since it is untyped
 
 	// Creating methods with same name and different signature
-	a1 := 10
-	a2 := 10.10
-	methods.PrintPassedValue(&a1)
-	methods.PrintPassedValue(&a2)
+	// methods.PrintPassedValue(10)
+	// methods.PrintPassedValue(10.10)
 
 	const divisor = 2
 	// However this is valid
