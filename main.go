@@ -24,7 +24,7 @@ var globalVariable int = 10
 // ? Variable declaration valid types
 // var a int is valid in this the default value of int is assigned to variable a
 // var a int = 9 this is valid in this we are specifying that the variable is of type int and assigning the value 9 to it
-// For const is same but if you are delcaring it like this const a int its value will be default value and you can't change it
+// For const you need to provide value because language declaration looks for the value to be assigned to const variable // ? Why it is not taking default value
 // But for short hand declaration that is not the case because it's defination says that you have to declare and assign value at the same time
 //  So a := 1 is valid but a := int is not niether a := var b int, Reason if it is expecting the value in both cases it will throw error (Both error will be different)
 
