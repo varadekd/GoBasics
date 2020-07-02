@@ -21,6 +21,15 @@ var globalVariable int = 10
 // But
 // a, b := 1 , a
 
+// ? Variable declaration valid types
+// var a int is valid in this the default value of int is assigned to variable a
+// var a int = 9 this is valid in this we are specifying that the variable is of type int and assigning the value 9 to it
+// For const is same but if you are delcaring it like this const a int its value will be default value and you can't change it
+// But for short hand declaration that is not the case because it's defination says that you have to declare and assign value at the same time
+//  So a := 1 is valid but a := int is not niether a := var b int, Reason if it is expecting the value in both cases it will throw error (Both error will be different)
+
+// TODO: Ask question with Om regarding the type float and int from Question.go file - answer found
+
 func main() {
 	// Printing message for package is called
 	methods.PackageImportMessage()
@@ -33,6 +42,20 @@ func main() {
 
 	// fmt.Println("Prinitng the value of divisor: " , divisor)
 	// Above syntax is not valid since the variable scope start after it is declared
+
+	// Type issue (Question to be asked) Answer found
+	// floatVal := 1
+	// methods.PassingFloatValue(floatVal)
+	// This wont work because the type of floatVal is int
+	// But if I use
+	// const floatVal = 1
+	// methods.PassingFloatValue(floatVal)
+	// Or methods.PassingFloatValue(1)
+	// This will work because for const value the context is changed since it is untyped
+
+	// Creating methods with same name and different signature
+	// methods.PrintPassedValue(10)
+	// methods.PrintPassedValue(10.10)
 
 	const divisor = 2
 	// However this is valid
@@ -111,6 +134,11 @@ func main() {
 	methods.UnderstandingPointerPointer()
 
 	// Using user defined type
+	//  Valid type of declaration
+	//  var person structs.Person we have delcared a variable person of type Person, Currently all the values are set to default
+	//  var person structs.Person = structs.Person{}  This is same as above because we have assigned the structs.Person with default values
+	//  var person = structs.Person{}  This will detect the variable is of type Person on its own.
+
 	person := structs.Person{
 		Firstname: "",
 		Lastname:  "Varade",
